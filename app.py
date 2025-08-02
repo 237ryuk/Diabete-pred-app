@@ -10,7 +10,8 @@ model = joblib.load("best_diabetes_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
 # Configuration de la page
-st.set_page_config(page_title="Prédiction du Diabète", layout="wide")
+#st.set_page_config(page_title="Prédiction du Diabète", layout="wide")
+st.set_page_config(layout="centered", page_title="Diagnostic IA", page_icon="🧬")
 st.title("\U0001F489 Prédiction du Diabète avec le Modèle Entraîné")
 
 # Sidebar pour les entrées utilisateur
@@ -68,3 +69,4 @@ if st.button("Lancer la Prédiction"):
         st.warning("\u26A0\ufe0f Risque modéré. Un contrôle médical est recommandé.")
     else:
         st.error("\u2620\ufe0f Risque élevé. Consultez rapidement un professionnel de santé.")
+
